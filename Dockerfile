@@ -1,4 +1,4 @@
-FROM ghcr.io/celestiaorg/celestia-app:v1.0.0-rc14 AS celestia-app
+FROM ghcr.io/celestiaorg/celestia-app:v1.0.0-rc16 AS celestia-app
 
 FROM ghcr.io/celestiaorg/celestia-node:v0.11.0-rc12
 
@@ -6,8 +6,8 @@ USER root
 
 # hadolint ignore=DL3018
 RUN apk --no-cache add \
-        curl \
-        jq \
+    curl \
+    jq \
     && mkdir /bridge \
     && chown celestia:celestia /bridge
 
